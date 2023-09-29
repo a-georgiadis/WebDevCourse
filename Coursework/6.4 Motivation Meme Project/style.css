@@ -1,0 +1,23 @@
+.textTop{
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+  }
+  .textBottom{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  html{
+    background-color: black;
+    color: white;
+  }
+  .center{
+
+    margin: 10% 25% 0% 25%;
+    width: 50%;
+  }
+  img{
+    width: 100%;
+    border: 5px solid white;
+  }
+  *{
+    text-align: center;
+  }
