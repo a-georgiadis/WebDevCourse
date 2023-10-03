@@ -1,0 +1,28 @@
+/* Write your CSS code below to make the blue items size, grow and shrink like the green ones.*/
+
+/* Link to Sites for Frogger: https://flexboxfroggy.com/
+and Puzzle https://appbrewery.github.io/flexbox-sizing-exercise/
+*/
+
+.container {
+    display: inline-flex;
+    justify-content: space-between;
+  }
+    
+  .container > * {
+  
+  }
+  
+  .item1 {
+   width: 200px;
+  }
+  
+  .item2 {
+   width: 200px;
+   min-width:200px;
+  }
+  
+  .item3 {
+   width: 400px;
+   min-width: 400px;
+  }
