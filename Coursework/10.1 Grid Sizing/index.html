@@ -6,6 +6,18 @@
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grid Fundamentals</title>
+
+
+  <!-- 
+    Solution:
+    .grid-container {
+    display: grid;
+    grid-template-columns: auto 400px minmax(200px, 500px);
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-auto-rows: 50px;
+    }
+   -->
+
   <style>
     body {
       font-family: sans-serif;
@@ -42,7 +54,9 @@
     <a class="item" href="./repeat.html">Repeat</a>
     <a class="item" href="./test.html">Test</a>
 
-
+    grid-template-columns: auto 400px minmax(200px 500px);
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-auto-rows: 50px;
   </div>
 </body>
 

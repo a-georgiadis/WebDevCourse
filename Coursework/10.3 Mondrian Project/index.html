@@ -18,12 +18,103 @@
     For dimensions, see dimensions.png image.
     HINT: Remember you can't change the properties of grid lines.
     But grid lines are transparent!
+
     */
+
+    /* I heavily over coded this one I definitely will make use of the solution in the future */
+    .container{
+      display: grid;
+      grid-template-columns: 320px 9px 198px 153px 9px 50px;
+      grid-template-rows: 414px 9px 130px 19px 155px 9px 20px;
+    }
+    .box1{
+      grid-row:1;
+      grid-column: 1;
+    }
+    .centVert{
+      grid-row: 1/8;
+      grid-column: 2;
+    }
+    .topRight{
+      grid-row:1;
+      grid-column: 3/7;
+    }
+    .middleAcross{
+      grid-row:2;
+      grid-column: 1/7;
+    }
+    .middleLeft{
+      grid-row: 3/6;
+      grid-column: 1/2;
+    }
+    .horizLineBottom{
+      grid-row: 6;
+      grid-column: 1/7;
+    }
+    .vertLineRight{
+      grid-row:3/8;
+      grid-column: 5;
+    }
+    .middleWhite{
+      grid-row: 3/6;
+      grid-column: 3/5;
+    }
+    .miniHoriz{
+      grid-row:4;
+      grid-column: 6;
+    }
+    .cremeBR{
+      grid-row:5/8;
+      grid-column: 6;
+    }
+    .cremeBottom{
+      grid-row:7;
+      grid-column: 1;
+    }
+    .red{
+      background-color: #E72F24;
+    }
+    .black{
+      background-color: #000;
+    }
+    .blue{
+      background-color: #004592;
+      grid-row:3;
+      grid-column: 6;
+    }
+    .white{
+      background-color: #F0F1EC;
+    }
+    .yellow{
+      background-color: #F9D01E;
+    }
+    .blackBox{
+      background-color: #232629;
+    }
+
   </style>
 </head>
 
 <body>
   <!-- Write your HTML here -->
+  <div class = "container">
+    <div class = 'red box1'></div>
+    <div class = 'black centVert'></div>
+    <div class = 'white topRight'></div>
+    <div class = 'black middleAcross'></div>
+    <div class = 'white middleLeft'></div>
+    <div class = 'black horizLineBottom'></div>
+    <div class = 'black vertLineRight'></div>
+    <div class = 'white middleWhite'></div>
+    <div class = 'black miniHoriz'></div>
+    <div class = 'blue'></div>
+    <div class = 'white cremeBR'></div>
+    <div class = 'white cremeBottom'></div>
+    <div class = 'yellow'></div>
+    <div class = 'blackBox'></div>
+
+  </div>
+
 </body>
 
 </html>
