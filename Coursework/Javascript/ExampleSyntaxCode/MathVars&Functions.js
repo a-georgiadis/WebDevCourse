@@ -26,6 +26,9 @@ b = 123 % 2;
 
 Math.exp(123, 2);
 
+// Randomization
+Math.random(); // Will generate a number between zero and 1
+
 // Incrementers
 x++
 x += 1
