@@ -1,0 +1,17 @@
+{
+  "name": "learning-npm",
+  "version": "1.0.0",
+  "description": "Learning about NPM",
+  "main": "index.js",
+  "type": "module",
+  "comment": "Above you can see that type module is added which was enables us to use the ESM package import methods",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AWG",
+  "license": "ISC",
+  "dependencies": {
+    "sillyname": "^0.1.0",
+    "superheroes": "^3.0.0"
+  }
+}
