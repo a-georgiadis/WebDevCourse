@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <!-- Importing Variable -->
+    <h1><%= title %></h1>
+    <p>Current second: <%= seconds %></p>
+    <ul>
+        <!-- If Else Statements -->
+        <% if (seconds % 2 === 0) { %>
+            <!-- For Loops -->
+            <% for( let i = 0; i < items.length; i++ ) { %>
+                <li>
+                    <%= items[i] %>
+                </li>
+            <% } %>
+        <% } else { %>
+            <p>No items to display</p>
+        <% } %>
+         
+
+    </ul>
+    <!-- Direct HTML content -->
+    <%- htmlContent %>
+    <!-- Include other modules -->
+    <%- include('footer.ejs') %>
+</body>
+</html>
