@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block uniqueHead %}
+    
+{% endblock %}
+
+{% block content %}
+<div class="row p-4">
+    <div class="card m-auto" style="width: 90%;" data-aos="fade-left">
+        <div class="card-body">
+            <div id="chart1"></div>
+            <p class="card-text"></p>
+        </div>
+        </div>
+    </div>
+
+    <div class="card mb-4 m-auto" style="width: 90%;" data-aos="fade-left">
+        <div class="card-body">
+            <div id="chart2"></div>
+            <p class="card-text"></p>
+        </div>
+    </div>
+
+    <div class="card mb-4 m-auto" style="width: 90%;" data-aos="slide-up">
+        <div class="card-body">
+            <div id="chart3"></div>
+            <p class="card-text"></p>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <!-- Scripts for AOS package which allows for fun labeling of paths -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- plotly CDN -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript">
+        var graphs1 = {{ graph1JSON | safe}};
+        // Plotly command comes from the plotly CDN
+        // The Parameters are the id of the location where to put the plot, the plot data and parameters
+        Plotly.plot("chart1", graphs1,{});
+        /*This example is taking advantage of the plotly express library in python which lets you export to the frontend*/
+        
+        var graphs2 = {{ graph2JSON | safe}};
+        Plotly.plot("chart2", graphs2,{});
+
+        var graphs3 = {{ graph3JSON | safe}};
+        Plotly.plot("chart3", graphs3,{});
+    </script>
+    
+
+{% endblock %}

@@ -15,9 +15,10 @@ def create_app():
     # Import the blueprint from the lower level
     from .routes import routes
     from .auth import auth
-    
+    from .plots import plots
     app.register_blueprint(routes, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
+    app.register_blueprint(plots, url_prefix='/')
     
     # Initialize Socket for use with the app
     socketio.init_app(app)

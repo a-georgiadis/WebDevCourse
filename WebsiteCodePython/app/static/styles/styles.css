@@ -9,3 +9,7 @@
     width: 40%;
     background-color: beige;
 }
+
+.chat-message-box > li{
+    list-style-type: none;
+}
