@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block uniqueHead %}
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class = "container text-center">
+    <h1>SocketIO Testing</h1>
+
+    <div class = "messageSubApp">
+        <h4>Example of Message Box that can allow for communication</h4>
+        <div class="chat">
+            <input type="text" id = "username" placeholder="Username">
+            <button id="join-chat">Start Chat</button>
+        </div>
+        <div class = "chat hidden text-left">
+            <ul class = "chat-message-box">
+                
+            </ul>
+            <input type="text" id = "message" placeholder="Enter a Message">
+            <button id = "send-message">Send Message</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        // Code for connecting to the messaging socket
+        const socket = io({autoConnect: false});
+        $('#join-chat').click(function(e){
+            let username = $('#username').val();
+            console.log(username)
+            // Initialize the socket connection once we have the user
+            socket.connect();
+            // Use an anonymous function to emit the data on the socket stream
+            socket.on("connect",function(){
+                // Send the information to the server
+                socket.emit("user_join", username);
+            })
+            // Adjust the visuals to show the things of interest
+            $('#join-chat').toggleClass('hidden');
+            $(".chat").toggleClass("hidden");
+        })
+
+        // Code for sending the messages using Socket
+        $('#message').keyup(function(e){
+            if (e.key == "Enter"){
+                let message = $("#message").val();
+
+                socket.emit("new_message", message);
+                
+                $("#message").val("");
+            }
+        })
+        
+        // Code for picking up on a socket request and posting that information on the page
+        socket.on("chat_update", function(data){
+
+            var li = $("<li></li>").text(data.message); 
+            $('.chat-message-box').append(li);
+            
+        })
+    </script>
+{% endblock %}

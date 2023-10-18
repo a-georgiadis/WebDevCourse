@@ -9,3 +9,7 @@ routes = Blueprint('routes',__name__)
 def index():
     user = {'username':'Ageorgi2'}
     return render_template("home.html", user=user)
+
+@routes.route("/socketio")
+def socketPage():
+    return render_template("socketIO.html")
