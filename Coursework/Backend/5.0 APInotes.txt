@@ -1,0 +1,15 @@
+
+APIs Used:
+
+SpaceStation Location API: Where the ISS at?
+https://wheretheiss.at/w/developer
+- Exercise 1 was to determine how to get the location using POSTMAN to send a get request
+
+Use bored-api.appbrewery.com to get a random activity:
+get bored-api.appbrewery.com/random
+
+Use it to get a query with two querry parameters
+get bored-api.appbrewery.com/filter?type=social&participants=2
+
+Path Parameter to get a specific path param:
+get bored-api.appbrewery.com/activity/{activityNum}
