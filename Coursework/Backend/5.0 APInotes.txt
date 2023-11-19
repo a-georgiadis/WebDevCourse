@@ -13,3 +13,15 @@ get bored-api.appbrewery.com/filter?type=social&participants=2
 
 Path Parameter to get a specific path param:
 get bored-api.appbrewery.com/activity/{activityNum}
+
+Using Postman:
+If trying to send information make sure to try different submission types
+like form encoeded and not encoded.
+
+Path Authentication:
+There are a few different ways to Authenticate with an API
+1) Basic Authentication - Sending your username and password
+2) API-KEY - Accessing key that can be linked with a particular user
+3) Authentication token that can be generated with the user directly with service
+that can then be passed to other services without giving them access to your 
+login info.
